@@ -28,7 +28,6 @@ const linkMapping = {
     "lectures_WrightRecht_Optimization_3.pdf": "https://drive.google.com/file/d/1aDn5iNVdmLsHp53eKxw_lgcSa2vFJALs/view?usp=drivesdk",
     "lectures_WrightRecht_Optimization_4.pdf": "https://drive.google.com/file/d/1MoSHY09vxxt6XjFjtNxh3GaNyhGneqk3/view?usp=drivesdk",
     "lectures_Justin-ZKbook_notes.pdf": "https://drive.google.com/file/d/1oRA6VxbPSSe3_qHGaIKb-yvgu3fYl0YQ/view?usp=drive_link",
-    "lectures_summary_recent_zk.pdf": "https://drive.google.com/file/d/1fHyp6gvpZBB9kMHgib33_vjH6fekucdd/view?usp=sharing",
     "paper_Joint_Control_of_Manufacturing_and_Onsite_Microgrid_System_via_Novel_Neural_Network_Integrated_Reinforcement_Learning_Algorithms.pdf": "https://drive.google.com/file/d/1MYC4hStMAKZrzZc8XcYODbklhyXyamfN/view?usp=drivesdk",
     "paper_On_the_fast_convergence_of_random_perturbations_of_the_gradient_flow.pdf": "https://drive.google.com/file/d/1r6nwQIPGceTHPkp0BIWw0fmYmzpzmLQk/view?usp=drivesdk",
     "slides_2-d_incompressible_Euler_equations_with_partial_damping.pdf": "https://drive.google.com/file/d/1D3OITC5FNuEU-2TLjcJyh3jocr78OkzM/view?usp=drivesdk",
