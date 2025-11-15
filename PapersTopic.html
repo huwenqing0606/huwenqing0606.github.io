@@ -12,60 +12,49 @@
 
 <H1>Papers by Topic.</H1>
 <P>
-<H3>12. Variance-Reduced Stochastic Gradient Methods for Compositional Optimization Problems.</H3>
-Compositional Optimization are a class of optimization problems that appear very often in many machine learning applications,
-such as portfolio management, reinforcement learning and stochastic neighbor embedding. The goal is to find the minimizer of the
-composition of expectations of two stochastic functions, and therefore is more challenging to optimize than vanilla stochastic
-optimization problem. Under this project, some investigations are made on variance-reduced stochastic gradient methods
-that solve compositional optimization problems. In [1] a team of W. Hu's collaborators
-(W. Hu participated in the writing of a very initial draft
-regarding this problem and thus the list of authors include W. Hu himself)
-proposed a compositional version of StochAstic Recursive grAdient algoritHm (SARAH-Compositional)
-and proved that it achieved the best known Incremental First-order Oracle (IFO) complexity upper bound (at the time of publication).
-Unfortunately the complete <A HREF="https://arxiv.org/abs/1912.13515">arXiv</A> version of this work contains a gap in the proof
-found by W. Hu and he feels that he cannot fill it in.
-In a recent work [2] done in 2020, H. Yuan brought W. Hu's attention to the
-STOchastic Recursive Momentum method, and based on this, the two authors propose the STORM-Compositional optimization
-that introduces the momentum term in the compositional gradient updates. STORM-Compositional is thus operating the stochastic recursive
-variance-reduced compositional gradients in an exponential-moving average way. STORM-Compositional avoids
-the missing gap in SARAH-Compositional (see the complete <A HREF="https://arxiv.org/abs/1912.13515">arXiv</A> version)
-mentioned before. This leads to the same IFO complexity
-that matches SARAH-Compositional. At the same time, STORM-Compositional is a single loop algorithm that avoids typical
-alternative tuning between large and small batch sizes, as well as recording of checkpoint gradients,
-that persist in variance-reduced stochastic gradient methods.
-This allows considerably simpler parameter tuning in numerical experiments, which demonstrates the
-superiority of STORM-Compositional over other stochastic compositional optimization algorithms.
+The most recently active research topics are listed first.
 
 
+<ol>
+
+<li><H3>Reaction-diffusion equations and wave front propagation in random media.</H3>
 <P>
-
-<b>Statement of Contribution of the work</b> [2]:
-H. Yuan brought W. Hu's attention to this problem and participated in one small discussion when W. Hu raised the question
-on the mini-batch sampling with replacement and another discussion about a question raised by W. Hu
-regarding the missing bound in <A HREF="https://arxiv.org/abs/1912.13515">this work</A>,
-the latter leading W. Hu to look at a relevant paper.
-W. Hu performed all the mathematical proofs in [2] and worked on the experiment for Stochastic Neighbor Embedding.
-W. Hu worked on the overall structure of the presentation and the write-up of the whole paper [2].
+Molecular motors, which are biological molecular machines that are the essential agents of movement in living organisms, can be modeled as diffusion particles traveling in a designated track. To model the environment in which the fluctuations due to thermal noise are significant, I have been considering the traveling of these motors in a narrow random channel. Under the asymptotic when the channel width is thin, I derive the limiting process as a diffusion process on a graph (see the work [1] below).
+Furthermore, I introduce in [2] a reaction-diffusion equation in random media, which models the change in space and time of the concentration of these motors. By making use of large deviations theory for diffusion processes in random media, I derive the wave front propagation formula for the corresponding reaction-diffusion system. For further information see
+<A HREF="slides_On_diffusion_and_wave_front_propagation_in_narrow_random_channels.pdf">this slides</A>.
 <P>
-<b>Acknowledgement of the work</b> [2]:
-The numerical experiments of [2] for portfolio management and reinforcement learning are done by
-Dr. Jiaojiao Yang from Anhui Normal University, Wuhu, Anhui, P.R.China. Due to no initial involvement into
-the project and upon graceful agreement with
-J. Yang, she is not listed as an author of [2].
-Still, W. Hu would like to thank J. Yang for the hard work in the numerical experiments.
-
+In a recent work [3] done in the year 2019, we consider the asymptotic wave speed for FKPP type
+reaction-diffusion equations on a class of infinite random metric trees.
+We show that a travelling wavefront emerges and we quantify it via a variational formula
+involving the random branching degrees and the random branch lengths of the tree. Here
+our key idea is to project the Brownian motion on the tree onto a one-dimensional
+axis along the direction of the wave propagation. The projected process is
+a multi-skewed Brownian motion, with skewness and interface sets that encode the metric structure of the tree.
+Combined with analytic arguments based on the Feynman-Kac formula, this idea
+connects our analysis of the wavefront propagation to the large deviations principle (LDP)
+of the multi-skewed Brownian motion with random skewness and random interface set. For more information you can take a look at
+<A HREF="slides_wave-tree.pdf">this slides</A>.
 <P>
-[2] Yuan, H., <b>Hu, W.</b>, Stochastic Recursive Momentum Method for Non-Convex Compositional Optimization.
-<A HREF="https://arxiv.org/abs/2006.01688">[arXiv]</A>
-<A HREF="https://github.com/huwenqing0606/STORM-Compositional">[source code]</A>
+[3] Fan, W., <b>Hu, W.</b>, Terlov, G., Wave propagation for reaction-diffusion equations on infinite random trees.
+<i>Communications in Mathematical Physics</i>,
+<b>384</b>, Issue 1, April 2021, pages 109-163. 
+<A HREF="https://arxiv.org/abs/1907.12962">[arXiv]</A>
+<A HREF="https://link.springer.com/article/10.1007%2Fs00220-021-04085-z">[journal paper]</A>
 <P>
-[1] Yuan, H., Lian, X., Li, C.J., Liu, J., <b>Hu, W.</b>,
-Efficient Smooth Non-Convex Stochastic Compositional Optimization via Stochastic Recursive Gradient Descent.
-<i>NeurIPS 2019 (Thirty-third Conference on Neural Information Processing Systems), Vancouver, Canada, December 8-14, 2019</i>.
-<A HREF="https://papers.nips.cc/paper/8916-efficient-smooth-non-convex-stochastic-compositional-optimization-via-stochastic-recursive-gradient-descent">[conference paper]</A>
+[2] Freidlin, M., <b>Hu, W.</b>, Wave front propagation for a reaction-diffusion equation in narrow random channels.
+<i>Nonlinearity</i>, <b>26</b>, 8, 2013, pp. 2333-2356.
+<A HREF="http://arxiv.org/abs/1303.6943">[arXiv]</A>
+<A HREF="http://iopscience.iop.org/0951-7715/26/8/2333/">[journal paper]</A>
+<P>
+[1] Freidlin, M., <b>Hu, W.</b>, On diffusion in narrow random channels.
+<i>Journal of Statistical Physics</i>, <b>152</b>, 2013, pp. 136-158.
+<A HREF="http://arxiv.org/abs/1210.5226">[arXiv]</A>
+<A HREF="http://link.springer.com/article/10.1007%2Fs10955-013-0763-3">[journal paper]</A>
+<P>
+</li>
 
-<H3>11. Markov Decision Processes and Reinforcement Learning applied to Microgrid and Manufacturing Systems.</H3>
 
+<li><H3>Markov Decision Processes and Reinforcement Learning applied to Microgrid and Manufacturing Systems.</H3>
 Several real-world applications of Markov Decision Process (MDP) and Reinforcement Learning are considered under this project.
 In [1], we propose a joint dynamic decision-making model for the optimal control for both manufacturing system and
 onsite generation system via MDP and a neural network integrated reinforcement learning algorithm.
@@ -89,30 +78,137 @@ and policy gradient methodologies in addressing the "curse of dimensionality" in
 with high dimensional and complicated state and action spaces. We refer to <A HREF="slides_RL-Manufacturing.pdf">
 this slide</A>.
 <P>
-
 [3] Yang, J., Sun, Z., <b>Hu, W.</b>, Steimeister, L., Joint Control of Manufacturing and Onsite Microgrid System via Novel
 Neural-Network Integrated Reinforcement Learning Algorithms.
 <i>Applied Energy</i>, Volume <b>315</b>, 1 June 2022, 118982.
 <A HREF="paper_Joint_Control_of_Manufacturing_and_Onsite_Microgrid_System_via_Novel_Neural_Network_Integrated_Reinforcement_Learning_Algorithms.pdf">[manuscript]</A>
 <A HREF="https://www.sciencedirect.com/science/article/pii/S0306261922003919?utm_campaign=STMJ_AUTH_SERV_PUBLISHED&utm_medium=email&utm_acid=128692634&SIS_ID=&dgcid=STMJ_AUTH_SERV_PUBLISHED&CMX_ID=&utm_in=DM248380&utm_source=AC_">[journal paper]</A>
 <A HREF="https://github.com/huwenqing0606/RL-manufacturing">[source code]</A>
-
 <P>
-
 [2] Islam, Md M., Zhong, X., Sun, Z., Xiong, H., <b>Hu, W.</b>,
 Real-Time Frequency Regulation Using Aggregated Electric Vehicles in Smart Grid.
 <i>Computers & Industrial Engineering</i>, Volume <b>134</b>, August 2019, pages 11-26.
 <A HREF="https://www.sciencedirect.com/science/article/abs/pii/S036083521930292X?via%3Dihub">[journal paper]</A>
-	
 <P>
-
 [1] <b>Hu, W.</b>, Sun, Z., Zhang, Y., Li, Y., Joint Manufacturing and Onsite Microgrid
 System Control Using Markov Decision Process and Neural Network Integrated Reinforcement Learning.
 <i>ICPR 2019 (the 25th International Conference on Production Research), Chicago, Illinois, USA, August 10-14, 2019</i>.
 <A HREF="https://www.sciencedirect.com/science/article/pii/S2351978920304121">[conference paper]</A>
+</li>
+
+<li><H3>Zero-Knowledge Proofs applied to Blockchain Systems and Virtual Machines.</H3>
+We explore a novel Zero-knowledge Virtual Machine (zkVM) framework leveraging succinct, 
+non-interactive zero-knowledge proofs for verifiable computation over any code. Our 
+approach divides the proof of program execution into two stages. In the first stage, 
+the process breaks down program execution into segments, identifying and grouping 
+identical sections. These segments are then proved through data-parallel circuits 
+that allow for varying amounts of duplication. In the subsequent stage, the verifier 
+examines these segment proofs, reconstructing the program's control and data flow 
+based on the segments' duplication number and the original program. The second 
+stage can be further attested by a uniform recursive proof.
+<P>
+We propose two specific designs of this concept, where segmentation and 
+parallelization occur at two levels: opcode and basic block. Both designs 
+try to minimize the control flow that affects the circuit size and support 
+dynamic copy numbers, ensuring that computational costs directly correlate 
+with the actual code executed (i.e., you only pay as much as you use). 
+In our second design, in particular, by proposing an innovative data-flow 
+reconstruction technique in the second stage, we can drastically cut down 
+on the stack operations even compared to the original program execution. 
+Note that the two designs are complementary rather than mutually exclusive. 
+Integrating both approaches in the same zkVM could unlock more significant 
+potential to accommodate various program patterns.
+<P>
+We present an asymmetric GKR scheme to implement our designs, pairing a 
+non-uniform prover and a uniform verifier to generate proofs for dynamic-length 
+data-parallel circuits. The use of a GKR prover also significantly reduces 
+the size of the commitment. GKR allows us to commit only the circuit's input and output, 
+whereas in Plonkish-based solutions, the prover needs to commit to all the witnesses.
+<P>
+[1] Liu, T., Zhang, Z., Zhang, Y., <b>Hu, W.</b>, Zhang, Y., <i>Ceno</i>: Non-uniform, Segment and Parallel Zero-knowledge Virtual Machine. 
+<i>Journal of Cryptology</i>, <b>38</b>, 17(2025).
+<A HREF="https://eprint.iacr.org/2024/387">[Cryptology ePrint Archive]</A>
+<A HREF="https://link.springer.com/article/10.1007/s00145-024-09533-2">[journal paper]</A>
+<A HREF="https://github.com/scroll-tech/ceno">[open-source project code]</A>
 
 
-<H3>10. Diffusion limit of stochastic approximation algorithms (e.g. stochastic gradient descent).</H3>
+<li><H3>Intepretable Neural Networks.</H3>
+Subspace Indexing with Interpolation (SIM-I) on Stiefel and Grassmann manifolds is proposed in [1]. 
+Given a partition of some original high-dimensional data set, SIM-I is constructed via two steps: 
+in the first step we build linear affinity-aware subspace models based on each partition; 
+in the second step we interpolate between several adjacent linear subspace models constructed 
+in the first step using the “center of mass” calculation on Stiefel and Grassmann manifolds. 
+Through these two steps, SIM-I builds a globally nonlinear and smoothly regularized 
+low-dimensional embedding model of the original data set. Furthermore, given sufficiently 
+many training samples on the data manifold either labelled by some pre-trained learning model 
+such as Deep Neural Networks (DNNs) or provided with original natural labels, 
+we first apply SIM-I on this data set and then perform nearest-neighbor classification 
+on the resulting low-dimensional embedding. This helps us to build a Lightweight Inference Engine (LIE) 
+carrying similar level of feature extraction by the pre-trained learning model. For DNNs, such LIE 
+can be interpreted as some (nonstandard) shallow neural network with a wide first hidden layer. 
+From this perspective, SIM-I provides a way to exchange deep network for wide but shallow ones 
+and may provide some new insights to interpret DNNs.
+<P>
+[1] <b>Hu, W.</b>, Jiang, T., Kathariya, B., Abrol, V., Zhang, J., Li, Z., Subspace Interpolation and Indexing on Stiefel and Grassmann Manifolds as a Lightweight Inference Engine.
+<i>IEEE Big Data 2023 (2023 IEEE International Conference on Big Data), Sorrento, Italy, December 15-18, 2023</i>.
+(Acceptance Rate: 92/526=17.5%)
+<A HREF="https://ieeexplore.ieee.org/document/10386432">[conference paper]</A>
+<A HREF="https://github.com/huwenqing0606/SubspaceIndexing_StiefelGrassmann/blob/master/BigD401_CameraReady.pdf">[manuscript]</A>
+<A HREF="https://github.com/huwenqing0606/SubspaceIndexing_StiefelGrassmann">[source code]</A>
+<A HREF="https://www.youtube.com/watch?v=MFwBrv3gcW0">[video]</A>
+
+
+<li><H3>Variance-Reduced Stochastic Gradient Methods for Compositional Optimization Problems.</H3>
+Compositional Optimization are a class of optimization problems that appear very often in many machine learning applications,
+such as portfolio management, reinforcement learning and stochastic neighbor embedding. The goal is to find the minimizer of the
+composition of expectations of two stochastic functions, and therefore is more challenging to optimize than vanilla stochastic
+optimization problem. Under this project, some investigations are made on variance-reduced stochastic gradient methods
+that solve compositional optimization problems. In [1] a team of W. Hu's collaborators
+(W. Hu participated in the writing of a very initial draft
+regarding this problem and thus the list of authors include W. Hu himself)
+proposed a compositional version of StochAstic Recursive grAdient algoritHm (SARAH-Compositional)
+and proved that it achieved the best known Incremental First-order Oracle (IFO) complexity upper bound (at the time of publication).
+Unfortunately the complete <A HREF="https://arxiv.org/abs/1912.13515">arXiv</A> version of this work contains a gap in the proof
+found by W. Hu and he feels that he cannot fill it in.
+In a recent work [2] done in 2020, H. Yuan brought W. Hu's attention to the
+STOchastic Recursive Momentum method, and based on this, the two authors propose the STORM-Compositional optimization
+that introduces the momentum term in the compositional gradient updates. STORM-Compositional is thus operating the stochastic recursive
+variance-reduced compositional gradients in an exponential-moving average way. STORM-Compositional avoids
+the missing gap in SARAH-Compositional (see the complete <A HREF="https://arxiv.org/abs/1912.13515">arXiv</A> version)
+mentioned before. This leads to the same IFO complexity
+that matches SARAH-Compositional. At the same time, STORM-Compositional is a single loop algorithm that avoids typical
+alternative tuning between large and small batch sizes, as well as recording of checkpoint gradients,
+that persist in variance-reduced stochastic gradient methods.
+This allows considerably simpler parameter tuning in numerical experiments, which demonstrates the
+superiority of STORM-Compositional over other stochastic compositional optimization algorithms.
+<P>
+<b>Statement of Contribution of the work</b> [2]:
+H. Yuan brought W. Hu's attention to this problem and participated in one small discussion when W. Hu raised the question
+on the mini-batch sampling with replacement and another discussion about a question raised by W. Hu
+regarding the missing bound in <A HREF="https://arxiv.org/abs/1912.13515">this work</A>,
+the latter leading W. Hu to look at a relevant paper.
+W. Hu performed all the mathematical proofs in [2] and worked on the experiment for Stochastic Neighbor Embedding.
+W. Hu worked on the overall structure of the presentation and the write-up of the whole paper [2].
+<P>
+<b>Acknowledgement of the work</b> [2]:
+The numerical experiments of [2] for portfolio management and reinforcement learning are done by
+Dr. Jiaojiao Yang from Anhui Normal University, Wuhu, Anhui, P.R.China. Due to no initial involvement into
+the project and upon graceful agreement with
+J. Yang, she is not listed as an author of [2].
+Still, W. Hu would like to thank J. Yang for the hard work in the numerical experiments.
+<P>
+[2] Yuan, H., <b>Hu, W.</b>, Stochastic Recursive Momentum Method for Non-Convex Compositional Optimization.
+<A HREF="https://arxiv.org/abs/2006.01688">[arXiv]</A>
+<A HREF="https://github.com/huwenqing0606/STORM-Compositional">[source code]</A>
+<P>
+[1] Yuan, H., Lian, X., Li, C.J., Liu, J., <b>Hu, W.</b>,
+Efficient Smooth Non-Convex Stochastic Compositional Optimization via Stochastic Recursive Gradient Descent.
+<i>NeurIPS 2019 (Thirty-third Conference on Neural Information Processing Systems), Vancouver, Canada, December 8-14, 2019</i>.
+<A HREF="https://papers.nips.cc/paper/8916-efficient-smooth-non-convex-stochastic-compositional-optimization-via-stochastic-recursive-gradient-descent">[conference paper]</A>
+</li>
+
+
+<li><H3>Diffusion limit of stochastic approximation algorithms (e.g. stochastic gradient descent).</H3>
 <P>
 Many large-scale learning problems in modern statistics and machine learning can
 be reduced to solving stochastic optimization problems, i.e., the search for (local) minimum
@@ -148,10 +244,10 @@ for more information.
 <i>Asymptotic Analysis</i>, Volume <b>122</b>, 2021, pages 371-393.
 <A HREF="https://arxiv.org/abs/1706.00837">[arXiv]</A>
 <A HREF="paper_On_the_fast_convergence_of_random_perturbations_of_the_gradient_flow.pdf">[journal paper]</A>
+</li>
 
 
-
-<H3>9. Covariance matrix estimation under High-Dimensional-Low-Sample-Size (HDLSS) setting and regularized linear discriminant analysis.</H3>
+<li><H3>Covariance matrix estimation under High-Dimensional-Low-Sample-Size (HDLSS) setting and regularized linear discriminant analysis.</H3>
 <P>
 Statistical estimation and inference under High-Dimensional-Low-Sample-Size (HDLSS) setting is one of the most challenging problems in the big data era. Under this research project, we propose various regularization methods using small size sample in the estimation of covariance matrices under high dimensional setting. These methods are then exploited to develop novel techniques in improving the inferential performance of the classical Fisher's Linear Discriminant Analysis (LDA), and concrete experiments are implemented on Electronic Health Records (EHR) dataset.
 <P>
@@ -174,11 +270,10 @@ Stockholm, Sweden, July 13-19, 2018</i>.
 <i>ICDM 2017 (2017 IEEE International Conference on Data Mining), New Orleans, Louisiana, USA, November 8-21, 2017</i>.
 <A HREF="https://ieeexplore.ieee.org/document/8215525/">[conference paper]</A>
 <P>
+</li>
 
 
-
-
-<H3>8. Multiscale Stochastic PDEs.</H3>
+<li><H3>Multiscale Stochastic PDEs.</H3>
 <P>
 Stochastic partial differential equations of reaction-diffusion type have been introduced to model the spacial-temporal evolution of concentrations of various components in a chemical reaction. The stochastic noises are responsible for the random changes in space-time of the rates of reaction. As a rule, the rates of chemical reactions in the system and the diffusion coefficients have different orders. Some of them are much smaller than others and this leads to the consideration of stochastic reaction-diffusion equations with a separation of slow and fast scales, i.e. multiscale stochastic reaction-diffusion equations. Under this project, we consider for the first time the problem of large deviations for multiscale stochastic reaction-diffusion equations in multiple dimensions with multiplicative noise. For more information, see
 <A HREF="slides_LDP_Multiscale_SRDE.pdf">this slides</A> and
@@ -189,10 +284,10 @@ Stochastic partial differential equations of reaction-diffusion type have been i
 <A HREF="https://arxiv.org/abs/1710.02618">[arXiv]</A>
 <A HREF="https://link.springer.com/article/10.1007/s40072-019-00140-y">[journal paper]</A>
 <P>
+</li>
 
 
-
-<H3>7. Two-dimensional stochastic fluid mechanics and turbulence models.</H3>
+<li><H3>Two-dimensional stochastic fluid mechanics and turbulence models.</H3>
 The famous canonical picture of 2-d turbulence due to Kraichnan
 [Kraichnan, R.H., Inertial ranges in two dimensional turbulence, <i>Physics of Fluids</i>, <b>10</b>(7), pp. 1417-1423, 1967]
 conjectures the downward energy and enstrophy cascades which spread the excitations to low Fourier modes through the nonlinearity.
@@ -212,7 +307,6 @@ of the nonlinearity, the stochastic noise and the partial dissipation. These int
 <A HREF="slides_2dEulerModel.pdf">this slides</A>
 and
 <A HREF="slides_Dynamics_of_geodesic_flows_with_random_forcing_on_Lie_groups_with_left_invariant_metrics.pdf">this slides</A> for more detailed elaborations.
-
 <P>
 [3] <b>Hu, W.</b>, On the long time behavior of a perturbed conservative system with degeneracy.
 <i>Journal of Theoretical Probability</i>, Volume <b>33</b>, pp.1266-1295, 2020. (Published online on 11, May 2019.)
@@ -229,11 +323,10 @@ and
 <A HREF="http://arxiv.org/abs/1511.02530">[arXiv]</A>
 <A HREF=" https://link.springer.com/article/10.1007/s00220-017-2877-y?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst">[journal paper]</A>
 <P>
+</li>
 
 
-
-
-<H3>6. Human mobility patterns via Hawkes processes.</H3>
+<li><H3>Human mobility patterns via Hawkes processes.</H3>
 <P>
 The Hawkes process is a simple point process that has long memory, clustering effect, self-exciting property and is in general non-Markovian. The future evolution of a self-exciting point process is influenced by the timing of the past events. By making use of a multivariate Hawkes process (MHP) on a network, we characterize the human mobility patterns and discover the synchronization effect of trip purposes from real-world data.
 <P>
@@ -241,11 +334,10 @@ The Hawkes process is a simple point process that has long memory, clustering ef
 <A HREF="http://dl.acm.org/citation.cfm?id=3098067">[conference paper]</A>
 <A HREF="http://www.kdd.org/kdd2017/papers/view/human-mobility-synchronization-and-trip-purpose-detection-with-mixture-of-h">[abstract and video]</A>
 <P>
+</li>
 
 
-
-
-<H3>5. Time Scales Stochastic Calculus.</H3>
+<li><H3>Time Scales Stochastic Calculus.</H3>
 <P>
 A very initial attempt to develop stochastic calculus on time scales is made under this research topic. The results may shed some lights in the development of a mathematical theory of quantum Brownian motion (q-Brownian motion on a quantum time scale). See <A HREF="slides_Ito_formula_general_time_scales.pdf">
 this slides</A>.
@@ -255,10 +347,10 @@ this slides</A>.
 <A HREF="https://arxiv.org/abs/1609.05967">[arXiv]</A>
 <A HREF="https://www.hindawi.com/journals/aaa/2017/9140138/">[journal paper]</A>
 <P>
+</li>
 
 
-
-<H3>4. Small mass limit of the Langevin equation (Smoluchowski-Kramers approximation).</H3>
+<li><H3>Small mass limit of the Langevin equation (Smoluchowski-Kramers approximation).</H3>
 <P>
 The Langevin equation is one of the most classical models in stochastic calculus for the random motion of a particle suspended in a fluid. As a second-order stochastic differential equation, it describes the dynamics of a particle subject to a deterministic drift, a friction proportional to its velocity, as well as random fluctuations. The small-mass limit of this equation, sometimes also called the Smoluchowski-Kramers approximation, has been the main justification of using a first order stochastic differential equation to replace the original second-order equation. I have been considering
 <A HREF="slides_Small_mass_asymptotic_for_the_motion_with_variable_and_vanishing_friction.pdf">variable and vanishing friction case of the Langevin equation</A>,
@@ -282,49 +374,10 @@ motion with vanishing friction.
 <A HREF="http://arxiv.org/abs/1203.0603">[arXiv]</A>
 <A HREF="http://www.springerlink.com/content/c077x0437u607430/ ">[journal paper]</A>
 <P>
+</li>
 
 
-
-
-<H3>3. Reaction-diffusion equations and wave front propagation in random media.</H3>
-<P>
-Molecular motors, which are biological molecular machines that are the essential agents of movement in living organisms, can be modeled as diffusion particles traveling in a designated track. To model the environment in which the fluctuations due to thermal noise are significant, I have been considering the traveling of these motors in a narrow random channel. Under the asymptotic when the channel width is thin, I derive the limiting process as a diffusion process on a graph (see the work [1] below).
-Furthermore, I introduce in [2] a reaction-diffusion equation in random media, which models the change in space and time of the concentration of these motors. By making use of large deviations theory for diffusion processes in random media, I derive the wave front propagation formula for the corresponding reaction-diffusion system. For further information see
-<A HREF="slides_On_diffusion_and_wave_front_propagation_in_narrow_random_channels.pdf">this slides</A>.
-<P>
-In a recent work [3] done in the year 2019, we consider the asymptotic wave speed for FKPP type
-reaction-diffusion equations on a class of infinite random metric trees.
-We show that a travelling wavefront emerges and we quantify it via a variational formula
-involving the random branching degrees and the random branch lengths of the tree. Here
-our key idea is to project the Brownian motion on the tree onto a one-dimensional
-axis along the direction of the wave propagation. The projected process is
-a multi-skewed Brownian motion, with skewness and interface sets that encode the metric structure of the tree.
-Combined with analytic arguments based on the Feynman-Kac formula, this idea
-connects our analysis of the wavefront propagation to the large deviations principle (LDP)
-of the multi-skewed Brownian motion with random skewness and random interface set. For more information you can take a look at
-<A HREF="slides_wave-tree.pdf">this slides</A>.
-<P>
-[3] Fan, W., <b>Hu, W.</b>, Terlov, G., Wave propagation for reaction-diffusion equations on infinite random trees.
-<i>Communications in Mathematical Physics</i>,
-<b>384</b>, Issue 1, April 2021, pages 109-163. 
-<A HREF="https://arxiv.org/abs/1907.12962">[arXiv]</A>
-<A HREF="https://link.springer.com/article/10.1007%2Fs00220-021-04085-z">[journal paper]</A>
-<P>
-[2] Freidlin, M., <b>Hu, W.</b>, Wave front propagation for a reaction-diffusion equation in narrow random channels.
-<i>Nonlinearity</i>, <b>26</b>, 8, 2013, pp. 2333-2356.
-<A HREF="http://arxiv.org/abs/1303.6943">[arXiv]</A>
-<A HREF="http://iopscience.iop.org/0951-7715/26/8/2333/">[journal paper]</A>
-<P>
-[1] Freidlin, M., <b>Hu, W.</b>, On diffusion in narrow random channels.
-<i>Journal of Statistical Physics</i>, <b>152</b>, 2013, pp. 136-158.
-<A HREF="http://arxiv.org/abs/1210.5226">[arXiv]</A>
-<A HREF="http://link.springer.com/article/10.1007%2Fs10955-013-0763-3">[journal paper]</A>
-<P>
-
-
-
-
-<H3>2. Diffusion processes and asymptotic analysis of PDEs.</H3>
+<li><H3>Diffusion processes and asymptotic analysis of PDEs.</H3>
 <P>
 The close relation between the theory of second-order differential equations and Markov processes with continuous trajectories benefits each other. By making use of the averaging principle of diffusion processes, I analyzed the behavior of the solution to a second-order equation with an elliptic operator having a degenerate characteristic form, perturbed by another elliptic operator multiplied by a small parameter. See
 <A HREF="slides_On_second_order_elliptic_equations_with_a_small_parameter.pdf">this slides</A>.
@@ -334,11 +387,10 @@ The close relation between the theory of second-order differential equations and
 <A HREF="http://arxiv.org/abs/1203.5096">[arXiv]</A>
 <A HREF="http://www.tandfonline.com/doi/abs/10.1080/03605302.2013.812658#.UiqeddJatIE">[journal paper]</A>
 <P>
+</li>
 
 
-
-
-<H3>1. Random perturbations of dynamical systems.</H3>
+<li><H3>Random perturbations of dynamical systems.</H3>
 <P>
 Dynamical systems with small random inputs are ubiquitous phenomena that appear in many scientific and engineering discipline. In the understanding of the time-evolution of a complex system, one chooses a relatively few number of major factors that govern the evolution of the system while neglecting other factors that are relatively insignificant. Due to the undetectable nature of these other factors being neglected, in a mathematical model they usually present themselves as random inputs. The random inputs can be included in some parameters that characterize the system, such as diffusion coefficients, rates of chemical reactions, time scales, etc. . Neglecting these random inputs is only effective in the case of finite time evolution. In fact, on long time scales, the factors which were considered as negligible, can become important and even critical for determining the system's behavior. By making use of large deviations theory and averaging principle, I have analyzed various model problems such as
 <A HREF="slides_On_stochasticity_in_nearly-elastic_systems.pdf">small random perturbations of nearly-elastic mechanical system</A>
@@ -369,9 +421,18 @@ Dynamical systems with small random inputs are ubiquitous phenomena that appear 
 <A HREF="http://arxiv.org/abs/1203.5468">[arXiv]</A>
 <A HREF="http://www.worldscientific.com/doi/abs/10.1142/S0219493711500201">[journal paper]</A>
 <P>
+</li>
 
+</ol>
+
+
+<hr>
+<P>Last updated: <span id="lastModified"></span></P>
+<script>
+document.getElementById("lastModified").textContent = document.lastModified;
+</script>
+<P>
 </font>
-
 </BODY>
 </HTML>
 
