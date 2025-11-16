@@ -10,7 +10,7 @@
 <font size="4" face="Times">
 
 
-<H1>Papers and Slides by Topic</H1>
+<H1>Research by Topic</H1>
 The most recently active research topics are listed first.
 
 <ol>
@@ -130,43 +130,57 @@ Joint Control of Manufacturing and Onsite Microgrid System via Markov Decision P
 
 
 <li><H3>Zero-Knowledge Proofs applied to Blockchain Systems and Virtual Machines.</H3>
-We explore a novel Zero-knowledge Virtual Machine (zkVM) framework leveraging succinct, 
-non-interactive zero-knowledge proofs for verifiable computation over any code. Our 
-approach divides the proof of program execution into two stages. In the first stage, 
-the process breaks down program execution into segments, identifying and grouping 
-identical sections. These segments are then proved through data-parallel circuits 
-that allow for varying amounts of duplication. In the subsequent stage, the verifier 
-examines these segment proofs, reconstructing the program's control and data flow 
-based on the segments' duplication number and the original program. The second 
-stage can be further attested by a uniform recursive proof.
+Zero-knowledge proofs (ZKPs) are interactive protocols where a prover can convince 
+a verifier they know a secret without revealing it. The leap to Succinct 
+Non-interactive Arguments of Knowledge (SNARKs) enabled very short proofs 
+and one-message communication. This has become a core component of Layer-2 
+scaling solutions (rollups) for blockchain systems like Ethereum, 
+leading to the so called zero-knowledge 
+Ethereum Virtual Machine (zkEVM). For example, zk-Rollups bundle 
+many transactions off-chain, then publish a SNARK proof on-chain that 
+the rollup state transition was correct. This results in a relatively low, 
+fixed on-chain verification cost, instead of processing each 
+transaction individually on-chain.
 <P>
-We propose two specific designs of this concept, where segmentation and 
-parallelization occur at two levels: opcode and basic block. Both designs 
-try to minimize the control flow that affects the circuit size and support 
-dynamic copy numbers, ensuring that computational costs directly correlate 
-with the actual code executed (i.e., you only pay as much as you use). 
-In our second design, in particular, by proposing an innovative data-flow 
-reconstruction technique in the second stage, we can drastically cut down 
-on the stack operations even compared to the original program execution. 
-Note that the two designs are complementary rather than mutually exclusive. 
-Integrating both approaches in the same zkVM could unlock more significant 
-potential to accommodate various program patterns.
-<P>
-We present an asymmetric GKR scheme to implement our designs, pairing a 
-non-uniform prover and a uniform verifier to generate proofs for dynamic-length 
-data-parallel circuits. The use of a GKR prover also significantly reduces 
-the size of the commitment. GKR allows us to commit only the circuit's input and output, 
-whereas in Plonkish-based solutions, the prover needs to commit to all the witnesses.
+In a recent paper [1], we propose a novel zero-knowledge Virtual Machine (zkVM) 
+framework. Unlike 
+<A HREF="https://github.com/privacy-ethereum/zkevm-circuits">previous proof systems</A> 
+following the sequential execution of opcodes, here we break 
+the execution of arbitrary code into segments (at opcode and basic-block levels) 
+and use data-parallel circuits with dynamic duplication of identical segments. 
+A key technical tool is our use of an asymmetric GKR protocol 
+(Goldwasser-Kalai-Rothblum) scheme, pairing a non-uniform prover 
+and a uniform verifier to handle dynamic-length data-parallel circuits. 
+This allows them to commit only to the circuit's input and output 
+(in contrast to many PLONK-style proofs where the prover must commit to all internal wires). 
 <H4>Papers.</H4>
 [1] Liu, T., Zhang, Z., Zhang, Y., <b>Hu, W.</b>, Zhang, Y., <i>Ceno</i>: Non-uniform, Segment and Parallel Zero-knowledge Virtual Machine. 
 <i>Journal of Cryptology</i>, <b>38</b>, 17(2025).
 <A HREF="https://eprint.iacr.org/2024/387">[Cryptology ePrint Archive]</A>
 <A HREF="https://link.springer.com/article/10.1007/s00145-024-09533-2">[journal paper]</A>
 <A HREF="https://github.com/scroll-tech/ceno">[open-source project code]</A>
+<H4>Expository Notes.</H4>
+[3] Documentations of ZKEVM circuits: 
+<A HREF="https://hackmd.io/@dieGzUCgSGmRZFQ7SDxXCA/BJF7RZad2">EVM Circuit</A>,
+<A HREF="https://hackmd.io/@dieGzUCgSGmRZFQ7SDxXCA/HkVuEMTOn">Bytecode Circuit</A>,
+<A HREF="https://hackmd.io/@dieGzUCgSGmRZFQ7SDxXCA/B1ePCba_2">State Circuit</A>,
+<A HREF="https://hackmd.io/@dieGzUCgSGmRZFQ7SDxXCA/B1454z6_3">Transaction Circuit</A>,
+<A HREF="https://hackmd.io/@dieGzUCgSGmRZFQ7SDxXCA/rJmoKkcO3">MPT Circuit</A>,
+<A HREF="https://hackmd.io/@dieGzUCgSGmRZFQ7SDxXCA/rk6AZvlo2">Signature Circuit</A>,
+<A HREF="https://hackmd.io/@dieGzUCgSGmRZFQ7SDxXCA/H1yLFYr9h">Public Input Circuit</A>,
+<A HREF="https://hackmd.io/@dieGzUCgSGmRZFQ7SDxXCA/H1vMF0_u2">Keccak Circuit</A>,
+<A HREF="https://hackmd.io/@dieGzUCgSGmRZFQ7SDxXCA/SyHlJiRin">Modexp Circuit</A>,
+<P>
+[2] Summary of some recent algorithms related to Zero-Knowledge Proofs. 
+<A HREF="https://drive.google.com/file/d/1fHyp6gvpZBB9kMHgib33_vjH6fekucdd/view?usp=sharing">Notes</A>.
+<P>
+[1] Notes on Cryptographic Zero-Knowledge Proofs (based on Justin Thaler's textbook <i>Proofs, Arguments and Zero-Knowledge</i>).
+<A HREF="lectures_Justin-ZKbook_notes.pdf">Notes</A>.
 </li>
 
 
 <li><H3>Intepretable Neural Networks.</H3>
+(to be revised) 
 Subspace Indexing with Interpolation (SIM-I) on Stiefel and Grassmann manifolds is proposed in [1]. 
 Given a partition of some original high-dimensional data set, SIM-I is constructed via two steps: 
 in the first step we build linear affinity-aware subspace models based on each partition; 
