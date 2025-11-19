@@ -50,6 +50,7 @@ const linkMapping = {
     "slides_perturbation-degenerate.pdf": "https://drive.google.com/file/d/1pExv5_88Nsvrfy_w_y05FXbDGUwsMfKs/view?usp=drivesdk",
     "slides_stochastic_approximation_perturbation.pdf": "https://drive.google.com/file/d/1Z_59bP5sCkLPiuJQPI0vzKq8d4h4JQqt/view?usp=drivesdk",
     "slides_wave-tree.pdf": "https://drive.google.com/file/d/1eg5LROwIVq_rl4PyYhGgExgAweeTvtVn/view?usp=drivesdk",
+    "slides_Subspace_Indexing.pdf": "https://drive.google.com/file/d/1i2Q7KDOT-CxRkytfW5iSwgpa8cM_viCd/view?usp=drive_link",
     "teaching_2013B_comments.pdf": "https://drive.google.com/file/d/1mXti7BAXHNg6wh5GF75j6uoGLWSLi6gh/view?usp=drivesdk",
     "teaching_2013B_evaluation.pdf": "https://drive.google.com/file/d/1PXr2ZkdtG-jcs15dnK2Fo9TeVHnPx4tZ/view?usp=drivesdk",
     "teaching_2014B_comments.pdf": "https://drive.google.com/file/d/1OdekZkNzP5lIOFSi4jqXhWNtXMN46Ae3/view?usp=drivesdk",
