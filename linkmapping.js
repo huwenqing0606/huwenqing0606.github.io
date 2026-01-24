@@ -75,6 +75,7 @@ const linkMapping = {
     "teaching_2020A_6001_Syllabus.pdf": "https://drive.google.com/file/d/152bM7V_zhYXefBixosF6cWXbksK6D_jL/view?usp=drivesdk",
     "teaching_2021A_6001_Flyer.pdf": "https://drive.google.com/file/d/10B3-hl6eDgH3ltacCX_SsWLSJqWr50ox/view?usp=drivesdk",
     "teaching_2021A_6001_Syllabus.pdf": "https://drive.google.com/file/d/1VEi7ga3GKTi_XMDJfKU_SYIyQ13ewq-X/view?usp=drivesdk",
+    "teaching_2026A_5001_Flyer.pdf": "https://drive.google.com/file/d/15ijMw9YH-vqg9tOo99qW6SEq8jW-M3D0/view?usp=drive_link",
     "teaching_CAPM_Yitong_Xu.pdf": "https://drive.google.com/file/d/18RpeDA7VUvkG1voguNkjZgM3N-xV68oU/view?usp=drivesdk",
     "teaching_Model_Selection_Wenjing_Yang.pdf": "https://drive.google.com/file/d/18UeoY3dV-JjT1v5w9BIJKGQlw_0XWDOq/view?usp=drivesdk",
     "teaching_Predator_Prey_Tyler_Blaszak.pdf": "https://drive.google.com/file/d/1k7I3pRI3W1EEPpKOxZRmTWkaT8_CGidg/view?usp=drivesdk",
