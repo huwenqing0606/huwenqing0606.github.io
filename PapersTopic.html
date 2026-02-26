@@ -234,68 +234,37 @@ Subspace Interpolation and Indexing on Stiefel and Grassmann Manifolds as a Ligh
 </li>
 
 
-<li><H3>Variance-Reduced Stochastic Gradient Methods for Compositional Optimization Problems.</H3>
-Compositional Optimization are a class of optimization problems that appear very often in many machine learning applications,
-such as portfolio management, reinforcement learning and stochastic neighbor embedding. The goal is to find the minimizer of the
-composition of expectations of two stochastic functions, and therefore is more challenging to optimize than vanilla stochastic
-optimization problem. Under this project, some investigations are made on variance-reduced stochastic gradient methods
-that solve compositional optimization problems. In [1] a team of W. Hu's collaborators
-(W. Hu participated in the writing of a very initial draft
-regarding this problem and thus the list of authors include W. Hu himself)
-proposed a compositional version of StochAstic Recursive grAdient algoritHm (SARAH-Compositional)
-and proved that it achieved the best known Incremental First-order Oracle (IFO) complexity upper bound (at the time of publication).
-Unfortunately the complete <A HREF="https://arxiv.org/abs/1912.13515">arXiv</A> version of this work contains a gap in the proof
-found by W. Hu and he feels that he cannot fill it in.
-In a recent work [2] done in 2020, H. Yuan brought W. Hu's attention to the
-STOchastic Recursive Momentum method, and based on this, the two authors propose the STORM-Compositional optimization
-that introduces the momentum term in the compositional gradient updates. STORM-Compositional is thus operating the stochastic recursive
-variance-reduced compositional gradients in an exponential-moving average way. STORM-Compositional avoids
-the missing gap in SARAH-Compositional (see the complete <A HREF="https://arxiv.org/abs/1912.13515">arXiv</A> version)
-mentioned before. This leads to the same IFO complexity
-that matches SARAH-Compositional. At the same time, STORM-Compositional is a single loop algorithm that avoids typical
-alternative tuning between large and small batch sizes, as well as recording of checkpoint gradients,
-that persist in variance-reduced stochastic gradient methods.
-This allows considerably simpler parameter tuning in numerical experiments, which demonstrates the
-superiority of STORM-Compositional over other stochastic compositional optimization algorithms.
-<P>
-<b>Statement of Contribution of the work</b> [2]:
-H. Yuan brought W. Hu's attention to this problem and participated in one small discussion when W. Hu raised the question
-on the mini-batch sampling with replacement and another discussion about a question raised by W. Hu
-regarding the missing bound in <A HREF="https://arxiv.org/abs/1912.13515">this work</A>,
-the latter leading W. Hu to look at a relevant paper.
-W. Hu performed all the mathematical proofs in [2] and worked on the experiment for Stochastic Neighbor Embedding.
-W. Hu worked on the overall structure of the presentation and the write-up of the whole paper [2].
-<P>
-<b>Acknowledgement of the work</b> [2]:
-The numerical experiments of [2] for portfolio management and reinforcement learning are done by
-Dr. Jiaojiao Yang from Anhui Normal University, Wuhu, Anhui, P.R.China. Due to no initial involvement into
-the project and upon graceful agreement with
-J. Yang, she is not listed as an author of [2].
-Still, W. Hu would like to thank J. Yang for the hard work in the numerical experiments.
+<li><H3>Stochastic Optimization Algorithms in Machine Learning.</H3>
+Many large-scale learning problems in modern statistics and machine learning can
+be reduced to solving stochastic optimization problems, i.e., the search for 
+(local) minimum points of the expectation of an objective random function 
+(loss function). These optimization problems are usually solved by 
+certain stochastic approximation algorithms, which are recursive 
+update rules with random inputs in each iteration. Under this project, 
+we have been considering various types of such stochastic 
+approximation algorithms, including the stochastic gradient descent, 
+the stochastic composite gradient descent and the stochastic heavy-ball method.
+By introducing approximating diffusion processes to the discrete recursive
+schemes, we have analyzed the convergence of the diffusion limits to these 
+algorithms via delicate techniques in stochastic analysis and asymptotic methods. 
+We also study the generalization properties of these algorithms when they are applied 
+to machine learning problems.
 <H4>Papers</H4>
-[2] Yuan, H., <b>Hu, W.</b>, Stochastic Recursive Momentum Method for Non-Convex Compositional Optimization.
-<A HREF="https://arxiv.org/abs/2006.01688">[arXiv]</A>
-<A HREF="https://github.com/huwenqing0606/STORM-Compositional">[source code]</A>
+[7] <b>Hu, W.</b>, Li, C.J., Zhou, X., On the Global Convergence of Continuous-Time Stochastic Heavy-Ball Method for Nonconvex Optimization.
+<i>IEEE Big Data 2019 (2019 IEEE International Conference on Big Data), Los Angeles, California, USA, December 9-12, 2019</i>.
+<A HREF="https://arxiv.org/abs/1712.05733">[arXiv]</A>
+<A HREF="https://ieeexplore.ieee.org/document/9005621">[conference paper]</A>
 <P>
-[1] Yuan, H., Lian, X., Li, C.J., Liu, J., <b>Hu, W.</b>,
+[6] Wu, J., <b>Hu, W.</b>, Xiong, H., Huan, J., Braverman, V., Zhu, Z., On the Noisy Gradient Descent that Generalizes as SGD.
+<i>ICML 2020 (37th International Conference on Machine Learning),  virtual conference due to COVID-19, July 12-18, 2020</i>.
+<A HREF="https://arxiv.org/abs/1906.07405">[arXiv]</A>
+<A HREF="http://proceedings.mlr.press/v119/wu20c/wu20c.pdf">[conference paper]</A>
+<P>
+[5] Yuan, H., Lian, X., Li, C.J., Liu, J., <b>Hu, W.</b>,
 Efficient Smooth Non-Convex Stochastic Compositional Optimization via Stochastic Recursive Gradient Descent.
 <i>NeurIPS 2019 (Thirty-third Conference on Neural Information Processing Systems), Vancouver, Canada, December 8-14, 2019</i>.
 <A HREF="https://papers.nips.cc/paper/8916-efficient-smooth-non-convex-stochastic-compositional-optimization-via-stochastic-recursive-gradient-descent">[conference paper]</A>
-</li>
-
-
-<li><H3>Diffusion limit of stochastic approximation algorithms (e.g. stochastic gradient descent).</H3>
-Many large-scale learning problems in modern statistics and machine learning can
-be reduced to solving stochastic optimization problems, i.e., the search for (local) minimum
-points of the expectation of an objective random function (loss function). These optimization
-problems are usually solved by certain stochastic approximation algorithms,
-which are recursive update rules with random inputs in each iteration. Under this project, we have been considering
-various types of such stochastic approximation algorithms, including the stochastic
-gradient descent, the stochastic composite gradient descent and the stochastic heavy-ball method.
-By introducing approximating diffusion processes to the discrete recursive
-schemes, we have analyzed the convergence of the diffusion limits to these algorithms via delicate techniques
-in stochastic analysis and asymptotic methods. 
-<H4>Papers</H4>
+<P>
 [4] <b>Hu, W.</b>, Li, C.J., Li, L., Liu, J., On the diffusion approximation of nonconvex stochastic gradient descent.
 <i>Annals of Mathematical Science and Applications</i>, Vol. <b>4</b>, No. 1(2019), pp. 3-32.
 <A HREF="https://arxiv.org/abs/1705.07562">[arXiv]</A>
@@ -474,21 +443,6 @@ The Hawkes process is a simple point process that has long memory, clustering ef
 </li>
 
 
-<li><H3>Time Scales Stochastic Calculus.</H3>
-A very initial attempt to develop stochastic calculus on time scales is made under 
-this research topic. The results may shed some lights in the development of a 
-mathematical theory of quantum Brownian motion (q-Brownian motion on a quantum time scale). 
-<H4>Papers</H4>
-[1] <b>Hu, W.</b>, Ito's formula, the stochastic exponential and change of measure on general time scales.
-<i>Abstract and  Applied Analysis</i>, Vol. 2017, Article ID 9140138, 2017.
-<A HREF="https://arxiv.org/abs/1609.05967">[arXiv]</A>
-<A HREF="https://www.hindawi.com/journals/aaa/2017/9140138/">[journal paper]</A>
-<H4>Slides</H4>
-[1] <A HREF="slides_Ito_formula_general_time_scales.pdf">
-Ito's formula on general time scales</A>.
-</li>
-
-
 <li><H3>Small mass limit of the Langevin equation (Smoluchowski-Kramers approximation).</H3>
 The Langevin equation is one of the most classical models in stochastic calculus for the 
 random motion of a particle suspended in a fluid. As a second-order stochastic 
@@ -603,7 +557,7 @@ Stochastic behavior in nearly-elastic billiard systems</A>.
 </ol>
 
 <hr>
-<P>Last updated: 01/2026</P>
+<P>Last updated: 02/2026</P>
 </font>
 
 </BODY>
