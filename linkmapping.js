@@ -80,6 +80,7 @@ const linkMapping = {
     "teaching_CAPM_Yitong_Xu.pdf": "https://drive.google.com/file/d/18RpeDA7VUvkG1voguNkjZgM3N-xV68oU/view?usp=drivesdk",
     "teaching_Model_Selection_Wenjing_Yang.pdf": "https://drive.google.com/file/d/18UeoY3dV-JjT1v5w9BIJKGQlw_0XWDOq/view?usp=drivesdk",
     "teaching_Predator_Prey_Tyler_Blaszak.pdf": "https://drive.google.com/file/d/1k7I3pRI3W1EEPpKOxZRmTWkaT8_CGidg/view?usp=drivesdk",
+    "teaching_Zeitlin_Paper_Review_BaylorDickinson.pdf": "https://drive.google.com/file/d/1ILLlNbgWr-t61t6HRy4fjpCrATWI78aQ/view?usp=drive_link",
     "teaching_VaR_Weiqian_Li.pdf": "https://drive.google.com/file/d/1h6cqvnfMF2IUjzTsb6bu4HUz7s18Qgju/view?usp=drivesdk",
     "teaching_VaR_Zhouman_Wu.pdf": "https://drive.google.com/file/d/1KiFwLLsgZ0uHa0gp2kaJ6uXt--PMFX5R/view?usp=drivesdk",
     "teaching_Complex_Variables_Final_Project": "https://drive.google.com/file/d/1mHpoIoEbBQ-0gu5Uh7d_xtQyT31asXVG/view?usp=drive_link",
